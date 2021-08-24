@@ -39,12 +39,6 @@ class ProductController extends Controller
         $categories = Categories::all();
         return view('product/form',['product' => $product, 'categories' => $categories, 'brands' => $brands]);
 
-
-
-
-
-
-
     }
 
     function save(Request $request){
