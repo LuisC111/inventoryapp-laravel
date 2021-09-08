@@ -22,7 +22,8 @@ class InvoiceFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'subtotal' => random_int(100, 10000),
+            'total' => random_int(500, 50000)
         ];
     }
 }
