@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Brand;
 use App\Models\Categories;
+use App\Models\Invoice;
 
 class ProductController extends Controller
 {

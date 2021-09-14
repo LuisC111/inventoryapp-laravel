@@ -87,6 +87,12 @@
                   Categories
                 </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/invoices">
+                  <span data-feather="shopping-cart"></span>
+                  Invoices
+                </a>
+              </li>
             </ul>
 
 

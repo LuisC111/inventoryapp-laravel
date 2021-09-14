@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\InvoiceController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -37,7 +38,7 @@ Route::get('categories/delete/{id}', [CategoriesController::class, 'delete'])->n
 Route::get('categories/form/{id?}', [CategoriesController::class, 'form'])->name('categories.form');
 Route::post('/categories/save',[CategoriesController::class,'save'])->name('categories.save');
 
-
+Route::get('/invoices', [InvoiceController::class, 'show']);
 
 Auth::routes();
 
