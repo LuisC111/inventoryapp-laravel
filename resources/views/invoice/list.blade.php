@@ -3,7 +3,7 @@
 @section('encabezado','Lista de facturas')
 @section('content')
 
-
+<a class="btn btn-primary" href="{{ route('invoice.form') }}">Nueva factura</a>
 <table class="table table-striped table-hover">
 <thead>
 <tr>
@@ -43,10 +43,10 @@
     <div class="modal-body">
 
     <div class="row">
-    <div class="col-sm-3">Producto</div>
-    <div class="col-sm-3">Cantidad</div>
-    <div class="col-sm-3">Precio</div>
-    <div class="col-sm-3">Total Producto</div>
+    <div class="col-sm-3"><b>Producto</b></div>
+    <div class="col-sm-3"><b>Cantidad</b></div>
+    <div class="col-sm-3"><b>Precio</b></div>
+    <div class="col-sm-3"><b>Total Producto</b></div>
     </div>
 
     @foreach ($invoice->products as $product)
@@ -62,6 +62,11 @@
     <div class="col-sm-6"></div>
     <div class="col-sm-3"><b>Subtotal:</b></div>
     <div class="col-sm-3"><b>$ {{ number_format($invoice->subtotal,0,",",".") }}</b></div>
+    </div>
+    <div class="row">
+    <div class="col-sm-6"></div>
+    <div class="col-sm-3"><b>IVA:</b></div>
+    <div class="col-sm-3"><b>$ {{ number_format($invoice->total-$invoice->subtotal,0,",",".") }}</b></div>
     </div>
     <div class="row">
     <div class="col-sm-6"></div>

@@ -39,6 +39,7 @@ Route::get('categories/form/{id?}', [CategoriesController::class, 'form'])->name
 Route::post('/categories/save',[CategoriesController::class,'save'])->name('categories.save');
 
 Route::get('/invoices', [InvoiceController::class, 'show']);
+Route::Get('/invoice/form', [InvoiceController::class, 'form'])->name('invoice.form');
 
 Auth::routes();
 
